@@ -6,19 +6,27 @@ export class LoggerService extends Logger {
         super();
     }
 
+    setContext(context: string) {
+        this.context = context;
+    }
+
     log(message: string, context?: string) {
-        super.log(`[${context}] ${message}`);
+        super.log(message, context);
     }
+
     error(message: string, context?: string) {
-        super.error(`[${context}] ${message}`);
+        super.error(message, context);
     }
+
     warn(message: string, context?: string) {
-        super.warn(`[${context}] ${message}`);
+        super.warn(message, context);
     }
+
     debug(message: string, context?: string) {
-        super.debug(`[${context}] ${message}`);
+        super.debug(message, context);
     }
+
     verbose(message: string, context?: string) {
-        super.verbose(`[${context}] ${message}`);
+        super.verbose(message, context);
     }
 }

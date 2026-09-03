@@ -1,9 +1,8 @@
-import { IUserBaseDTO } from "@/src/shared/entities/users/users";
+import { IUserBase } from "@/src/shared/domain/users/users.interface";
 import { IsEmail, IsString, MinLength } from "class-validator";
-import { ApiProperty } from "@nestjs/swagger";
 
 
-export class CreateUserDTO implements Pick<IUserBaseDTO, "username" | "email"> {
+export class CreateUserDTO implements Pick<IUserBase, "username" | "email"> {
     /**
      * @example johndoe123
      */

@@ -1,8 +1,8 @@
-import { IUserBaseDTO } from "@/src/shared/entities/users/users";
+import { IUserBase } from "@/src/shared/domain/users/users.interface";
 import { IsString, IsEmail, IsStrongPassword } from "class-validator";
 import { IsStringMatches } from "../decorators/match.decorator";
 
-export class AuthRegisterDTO implements Pick<IUserBaseDTO, "email"> {
+export class AuthRegisterDTO implements Pick<IUserBase, "email"> {
     /** 
      * @example john@example.com
      */
